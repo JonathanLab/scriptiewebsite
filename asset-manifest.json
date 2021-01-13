@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/scriptiewebsite/static/css/main.e2627377.chunk.css",
-    "main.js": "/scriptiewebsite/static/js/main.3f31d7ee.chunk.js",
-    "main.js.map": "/scriptiewebsite/static/js/main.3f31d7ee.chunk.js.map",
+    "main.css": "/scriptiewebsite/static/css/main.e4e7f8b1.chunk.css",
+    "main.js": "/scriptiewebsite/static/js/main.2e73f89f.chunk.js",
+    "main.js.map": "/scriptiewebsite/static/js/main.2e73f89f.chunk.js.map",
     "runtime-main.js": "/scriptiewebsite/static/js/runtime-main.06241d88.js",
     "runtime-main.js.map": "/scriptiewebsite/static/js/runtime-main.06241d88.js.map",
     "static/js/2.c4fa63d7.chunk.js": "/scriptiewebsite/static/js/2.c4fa63d7.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.2845a3bd.chunk.js": "/scriptiewebsite/static/js/3.2845a3bd.chunk.js",
     "static/js/3.2845a3bd.chunk.js.map": "/scriptiewebsite/static/js/3.2845a3bd.chunk.js.map",
     "index.html": "/scriptiewebsite/index.html",
-    "static/css/main.e2627377.chunk.css.map": "/scriptiewebsite/static/css/main.e2627377.chunk.css.map",
+    "static/css/main.e4e7f8b1.chunk.css.map": "/scriptiewebsite/static/css/main.e4e7f8b1.chunk.css.map",
     "static/js/2.c4fa63d7.chunk.js.LICENSE.txt": "/scriptiewebsite/static/js/2.c4fa63d7.chunk.js.LICENSE.txt",
     "static/media/acceval.8a8c24b3.png": "/scriptiewebsite/static/media/acceval.8a8c24b3.png",
     "static/media/cnn.152bb0be.png": "/scriptiewebsite/static/media/cnn.152bb0be.png",
@@ -24,7 +24,7 @@
   "entrypoints": [
     "static/js/runtime-main.06241d88.js",
     "static/js/2.c4fa63d7.chunk.js",
-    "static/css/main.e2627377.chunk.css",
-    "static/js/main.3f31d7ee.chunk.js"
+    "static/css/main.e4e7f8b1.chunk.css",
+    "static/js/main.2e73f89f.chunk.js"
   ]
 }
