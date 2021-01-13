@@ -17,6 +17,10 @@ function App() {
           {/* header */}
           <div class="shadow-xl mx-auto w-1/2 mb-10 p-10  bg-white  rounded-lg">
             <h1 class="text-5xl font-extrabold text-red-400 pb-5">Hoe bouw je een muziekgenre classificeerder?</h1>
+            <p class="italic pb-3">Gemaakt door Jonathan Mieloo, Jan Pieter Kroeb, Philip Schutte, Dylan Koster</p>
+            <p class="italic pb-3">
+              Gebaseerd op de scriptie van Casper Dahmen: Muziekgenre classificatie met een convolutioneel neuraal netwerk gebruikmakend van mel-frequentiecepstrum coefficienten, 2020
+            </p>
             <p>
               In de tijd van muziekstreaming is het voor de muziekliefhebber belangrijk om aanbevelingen te krijgen over potentiële nieuwe singles die de luisteraar ook kan liefhebben. Een manier om deze nieuwe singles te vinden is door verder te kijken naar nieuwe nummers binnen dezelfde genre. Vanwege de drang van muziekconsumptie heeft een streamservice zoals Spotify al computers gebruikt voor het generen van speellijsten met nummers die de luisteraar potentieel leuk zou kunnen vinden.
               Het herkennen van muziekgenres door middel van een computer is een kwestie dat bestaat uit  verschillende moeilijkheden, voornamelijk het verkrijgen van bruikbare informatie uit de muziek en het classificeren elk genre door vast te stellen welke kenmerken bij een genre behoren.
@@ -39,7 +43,7 @@ function App() {
             </div>
             <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
               <h3 class="mb-3 font-bold text-gray-800 text-xl">Mel-Frequentie Cepstrum Coëfficient</h3>
-              <p class="text-left text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">Deze scripte gebruikt MFCC om kenmerken uit de muziek te halen, MFCC staat voor Mel-Frequentie Cepstrum Coëfficient. Dit zijn korte-termijns kenmerken gebaseerd op de frequenties in het geluid. MFCC gebruikt de mel schaal voor geluid, waarin de frequenties gerelateerd worden aan de frequenties die waargenomen worden door mensen. Mensen merken eerder het verschil op tussen lage frequenties dan tussen hoge frequenties. De mel-schaal is dan ook logaritmisch gerelateerd aan de hertz schaal (Absolute frequenties).
+              <p class="text-left text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">De scripte gebruikt MFCC om kenmerken uit de muziek te halen, MFCC staat voor Mel-Frequentie Cepstrum Coëfficient. Dit zijn korte-termijns kenmerken gebaseerd op de frequenties in het geluid. MFCC gebruikt de mel schaal voor geluid, waarin de frequenties gerelateerd worden aan de frequenties die waargenomen worden door mensen. Mensen merken eerder het verschil op tussen lage frequenties dan tussen hoge frequenties. De mel-schaal is dan ook logaritmisch gerelateerd aan de hertz schaal (Absolute frequenties).
               <br />
                 <br />
 
@@ -73,7 +77,7 @@ function App() {
               <div class="order-1 bg-red-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
                 <h3 class="mb-3 font-bold text-white text-xl">Covolutionele Neurale Netwerken</h3>
                 <p class="text-left text-sm  leading-snug tracking-wide text-white text-opacity-100">
-                  Een convolutioneel neural netwerk (CNN), een type kunstmatige intelligentie, is aangeleerd hoe deze spectogrammen geclassificeerd kunnen worden in genres. Gebaseerd op de patronen die te vinden zijn in de spectogrammen van muziek, kan het CNN de muziek opdelen in deze genres. CNNs worden gebrukt in vele computer vision en machine learning problemen. Het CNN bestaat uit verschillende lagen: De input, hidden en output laag. De input laag ontvangt een multidimensionele vector gebaseerd op de MFCC. De hidden laag voeren hier vervolgens operaties op uit, en de output laag is het resultaat. De hidden laag bestaat uit onder andere convolutionele lagen om patronen te herkennen, pooling lagen om dimensies van de output te verkleinen en de fully-connected lagen die de input classificeren naar een label.
+                  Een convolutioneel neural netwerk (CNN), een type kunstmatige intelligentie, is aangeleerd hoe deze spectogrammen geclassificeerd kunnen worden in genres. Gebaseerd op de patronen die te vinden zijn in de spectogrammen van muziek, kan het CNN de muziek opdelen in deze genres. CNNs worden gebrukt in vele computer vision en machine learning problemen. Het CNN bestaat uit verschillende lagen: De input, hidden en output laag. De input laag ontvangt een multidimensionele vector gebaseerd op de MFCC. De hidden laag voeren hier vervolgens operaties op uit, en de output laag is het resultaat waarmee muziek geclassificeerd kan worden. De hidden laag bestaat uit onder andere convolutionele lagen om patronen te herkennen, pooling lagen om dimensies van de output te verkleinen en de fully-connected lagen die de input classificeren naar een label.
                 </p>
               </div>
             </div>
@@ -84,7 +88,7 @@ function App() {
               </div>
               <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
                 <h3 class="mb-3 font-bold text-gray-800 text-xl">Convolutie Laag</h3>
-                <p class="text-left text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">De convolutie lagen passen convolutie toe op de input laag, met als resultaat een feature map die patronen representeert. Convolutie werkt door een kernel/filter te laten lopen over de input en het scalair product te nemen. Hier komtals resultaat komt hier de eerder genoemde feature map uit voort.
+                <p class="text-left text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">De convolutie lagen passen convolutie toe op de input laag, met als resultaat een feature map die patronen representeert. Convolutie werkt door een kernel/filter te laten lopen over de input en het scalair product te nemen. Hier komt als resultaat de eerder genoemde feature map uit voort.
               </p>
               </div>
             </div>
@@ -96,7 +100,6 @@ function App() {
               <div class="order-1 bg-red-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
                 <h3 class="mb-3 font-bold text-white text-xl">ReLu Laag</h3>
                 <p class="text-left text-sm  leading-snug tracking-wide text-white text-opacity-100">
-                  ReLu:
                   Na de convolutie laag volgt de rectified linear unit (ReLu) laag, die positive getallen hetzelfde houdt maar negatieve getallen omzet naar nul. Dit versnelt de training van het netwerk.
 
                 </p>
@@ -143,7 +146,7 @@ function App() {
             <div class="z-20 order-1 bg-white w-5/12 shadow-xl px-6 py-4 rounded-lg">
               <p class="text-left text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
                 Voor het labelen van een genre aan een nummer is een uitgebreid dataset nodig, hier gebruikt zijn de GTZAN en FMA datasets, die gezamenlijk 9000 secties van verschillende nummers heeft en 15 verschillende koppelbare genres heeft, waarvan uiteindelijk 10 genres gebruikt worden.
-                Bij elk nummer worden de MFCCs bepaald, waar de coëfficiënten dan daaruit worden in een spectrogram verwerkt. Uiteindelijk wordt deze informatie allemaal verwerkt door het deep learning algoritme van TensorFlow, waar het algoritme uiteindelijk dan het genre uithaalt.
+                Bij elk nummer worden de MFCCs bepaald, waar de coëfficiënten dan daaruit worden in een spectrogram verwerkt. Uiteindelijk wordt deze informatie allemaal verwerkt door het deep learning algoritme van TensorFlow. Hiermee kan een CNN gecreeerd worden, waarmee het algoritme uiteindelijk dan het genre uithaalt.
                 </p>
             </div>
             <div class="order-1 w-5/12 px-6 py-4">
@@ -225,6 +228,56 @@ function App() {
             </div>
             <div class="order-1 w-5/12 px-6 py-4">
 
+            </div>
+          </div>
+
+          {/* visie */}
+          <div class="mb-8 flex justify-between items-center w-full right-timeline">
+            <div class="order-1 w-5/12"></div>
+            <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-32 h-32 rounded-full">
+              <h1 class="mx-auto font-semibold text-lg text-white">Visie op Informatica Onderzoek</h1>
+            </div>
+            <div class="order-1 w-5/12 px-6 py-4">
+            </div>
+          </div>
+          <div class="mb-8 flex justify-between items-center w-full right-timeline">
+            <div className='w-5/12'></div>
+            <div className="w-1/12"></div>
+            <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
+              <h3 class="mb-3 font-bold text-gray-800 text-xl">Jan Pieter</h3>
+              <p class="text-left text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">Tijdens het analyseren van de scriptie begon het duidelijk voor mij te worden hoe oudere technieken ook zo veel onderzoek nodig hadden, en hoeveel onderzoek ook is ontstaan uit onderzoek. Iets voor velen zelfsprekends zoals een automatische lijst met nieuwe nummers zijn eigenlijk ontstaan door vele ontwikkelingen binnen de informatica zoals machine learning en zelfs wat beeldverwerking.
+              Ook al waren de resultaten niet spectaculair, andere mensen kunnen misschien geïnspireerd raken en verbeteringen vinden binnen het vlak van AI of zelfs alternatieven, waardoor deze scriptie voor een uiteindelijk beter product kan zorgen.
+
+              </p>
+            </div>
+          </div>
+          <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+            <div class="order-1 w-3/12"></div>
+            <div className="w-5/12"></div>
+
+            <div class="order-1 bg-red-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
+              <h3 class="mb-3 font-bold text-white text-xl">Dylan</h3>
+              <p class="text-left text-sm leading-snug tracking-wide text-white text-opacity-100">Deze scriptie laat zien dat het combineren van oudere technieken van belang kan zijn voor het creeëren van nieuwere, mogelijk snellere of betere technieken. Het raden van muziekgenres op basis van een audioclip is niks nieuws, maar een onderzoek zoals deze laat wel zien dat de manier waarop het gedaan is, NCC met MFCC, mogelijk voor bedrijven juist wel of geen goed idee is om te implementeren. De scriptie legt met veel detail uit hoe de methodes NCC en MFCC werken, waardoor iemand met interesse in één of beide van deze methodes deze makkelijk kan reconstrueren.  Met duidelijke resultaten zoals in deze scriptie gepresenteerd kan geïnterreseerde lezers duidelijkheid bieden of dit de manier is waarop ze het willen doen. Daarbij komt nog dat zo'n scriptie duidelijk maakt wat er allemaal mogelijk is op het gebied van wiskunde en machine learning. Op het gebied van machine learning is natuurlijk in de laatste paar jaren extreem voor voortgang geboekt, en deze scripte laat dat goed zien.
+              </p>
+            </div>
+          </div>
+          <div class="mb-8 flex justify-between items-center w-full right-timeline">
+            <div className='w-5/12'></div>
+            <div className="w-1/12"></div>
+            <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
+              <h3 class="mb-3 font-bold text-gray-800 text-xl">Philip</h3>
+              <p class="text-left text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">Hoewel deze scriptie geen nieuwe technieken presenteert, wordt er wel mee ondersteunt dat neurale netwerken erg breed toepasbaar zijn. Hierbij is natuurlijk wel van belang dat het verkrijgen van input voor het netwerk op de juiste manier verloopt (in dit geval m.b.v. MFCC). Het eindmodel van de scriptie is misschien niet goed genoeg voor muziekservices als Spotify, maar het geeft andere onderzoekers wel de mogelijkheid om het model zodanig te verbeteren dat het model wel gebruikt kan worden in de praktijk. Ik ben dan ook van mening dat niet elk onderzoek/scriptie met baanbrekende resultaten hoeft te komen om nuttig te zijn. Het lijkt mij alleen maar nuttig voor een onderzoeker binnen een bepaald vakgebied als er binnen dat vakgebied veel voorgaand onderzoek is gedaan. Hierdoor kan de onderzoeker zich oriënteren op wat voor elementen uit relevante onderzoeken niet goed werken en waarom dat dan niet het geval is, of juist de goede elementen combineren tot een zo goed mogelijk eindresultaat. Vakgebieden als machine learning combineren veel kennis uit de wiskunde en informatica. Er zijn talloze onderzoeken voorafgaand aan de fase waarin machine learning zich nu in bevindt. Vandaar verwacht ik dat voor dit soort vakgebieden de vooruitgang over de loop van de tijd vanaf nu geen ‘hoge pieken’ meer zal hebben, maar dat het vrij geleidelijk omhoog zal lopen.
+              </p>
+            </div>
+          </div>
+          <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+            <div class="order-1 w-3/12"></div>
+            <div className="w-5/12"></div>
+
+            <div class="order-1 bg-red-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
+              <h3 class="mb-3 font-bold text-white text-xl">Jonathan</h3>
+              <p class="text-left text-sm leading-snug tracking-wide text-white text-opacity-100">Deze scriptie introduceert in een zekere zin niet nieuwe concepten als het gaat om machine learning of signaalverwerking. Maar niet iedere informatica studie hoeft naar mijn mening baanbrekend te zijn, maar kan ook tonen dat sommige concepten in de praktijk uit te voeren van. De scriptie van Casper Dahmen is hier een voorbeeld van. Het is namelijk een sterke demonstratie van wat mogelijk is met machine learning, een veld dat de afgelopen jaren enorm gegroeid is. Muziekgenres classificeren is iets waarbij meteen aan vele toepassingen gedacht kan worden, zoals bijvoorbeeld de gebruiker de juiste muziek aanraden gebaseerd op de luistergeschiedenis van die gebruiker. Echter is het wel belangrijk om te kijken bij het maken van een scriptie als deze, het opstel niet te snel vervalt naar een ‘project’ waar weinig academische waardes te halen is. Maar dat is in deze scriptie zeker niet het geval naar mijn mening. Zelf ben ik erg benieuwd naar wat de toekomst van informatica ons gaat brengen, met onder andere nieuwe ontdekkingen op het gebied van machine learning en andere delen van kunstmatige intelligentie.
+              </p>
             </div>
           </div>
         </div>
